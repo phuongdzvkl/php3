@@ -18,9 +18,8 @@ use App\Http\Controllers\ThongtinSVController;
 |
 */
 
-Route::get('/thongtin-sv',[ThongtinSVController::class, 'thongtinSV']);
 
-Route::get('/', [TestController::class,'index']);
+Route::get('/', [ProductController::class,'listProduct']);
 Route::get('/list', [ProductController::class,'listProduct']);
 Route::get('/create', [ProductController::class,'createProduct']);
 Route::post('/handle_create', [ProductController::class,'handleCreateProduct']);
