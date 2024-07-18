@@ -1,5 +1,5 @@
 @include('header')
-<h1>Trang thêm sản phẩm</h1>
+<h1>Trang thêm sản phẩm nhoa</h1>
 <form action="/handle_create" method="POST">
     <label for="" class="form-lable">Tên:</label>
     <input type="" name="name" class="form-control">
