@@ -3,26 +3,26 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Order;
 use App\Models\Product;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class ProductFactory extends Factory
+class OrderDetailFactory extends Factory
 {
     /**
      * Define the model's default state.
      *
      * @return array<string, mixed>
      */
-
     public function definition(): array
     {
-
         return [
-            'name' => $this->faker->word,
+            'orderId' => Order::all()->random()->order_id,
             'price' => $this->faker->randomFloat(2, 1, 100),
-            'description' => $this->faker->word,
+            'quantity' => $this->faker->randomNumber(),
+            'productId' => Product::all()->random()->product_id,
             'created_at' => $this->faker->dateTime,
             'updated_at' => $this->faker->dateTime,
         ];
